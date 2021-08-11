@@ -37,3 +37,9 @@ create table if not exists answers (
   question_id integer references questions (question_id)
 );
 
+drop table if exists photos;
+create table if not exists photos (
+  photo_id serial primary key unique,
+  photo_url char(1000),
+  answer_id integer references answers (answer_id)
+);
