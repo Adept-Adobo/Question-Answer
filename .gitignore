@@ -147,3 +147,13 @@ Temporary Items
 
 # Extras
 config.js
+
+### Node ###
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
