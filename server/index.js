@@ -1,14 +1,12 @@
-const {Client} = require('pq')
-const client = new Client({
-  user: 'root',
-  password: '',
-  database: 'qa'
+const express = require('express');
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
-client.connect();
-
-client.query('SELECT * FROM PHOTOS', (err, res) => {
-  console.log(err, res)
-})
-
-module.exports = client;
+app.listen(port, () => {
+  console.log(`example app listening at http://localhost:${port}`);
+});
