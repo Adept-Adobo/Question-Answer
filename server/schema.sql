@@ -71,15 +71,6 @@ from
   '/Users/xingvoong/Desktop/hack_reactor/xing-sdc/server/db/clean_answers.csv'
 with
   (format csv, delimiter ',', header);
--- insert into
---   answers (id, question_id, body, date_written, answerer_id, reported, helpful)
--- values
---   (1,36,'Supposedly suede, but I think its synthetic',1599958385988,3016661,0,1),
---   (2,13,'Some kind of recycled rubber, works great!',1615008233634,3102184,0,2);
-
-
-
-
 
 
 drop table if exists photos;
