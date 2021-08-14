@@ -86,3 +86,6 @@ from
   '/Users/xingvoong/Desktop/hack_reactor/xing-sdc/server/db/answers_photos.csv'
 with
   (format csv, delimiter ',', header);
+
+-- create index product_questions on questions (product_id);
+-- create index question_answers on answers(question_id);
