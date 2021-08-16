@@ -1,16 +1,22 @@
 /* eslint-disable camelcase */
 const express = require('express');
+const bodyParser = require('body-parser')
 const pool = require('./db');
 const controller = require('./controller');
 
 const app = express();
 const port = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
 app.get('/qa/questions/:product_id', controller.questions.get);
+
+app.post('/qa/questions/:product_id', controller.questions.post);
 
 app.get('/qa/questions/:question_id/answers', (req, res) => {
   const { question_id } = req.params;

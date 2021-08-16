@@ -92,12 +92,12 @@ create index question_answers on answers(question_id);
 create index username_users on users(username);
 create index answer_photos on photos(answer_id);
 
-select setval('answers_id_seq', (select max(id) + 1 from answers));
+select setval('answers_id_seq', (select max(id) from answers));
 
-select setval('photos_id_seq', (select max(id) + 1 from photos));
+select setval('photos_id_seq', (select max(id) from photos));
 
-select setval('products_id_seq', (select max(id) + 1 from products));
+select setval('products_id_seq', (select max(id) from products));
 
-select setval('questions_id_seq', (select max(id) + 1 from questions));
+select setval('questions_id_seq', (select max(id) from questions));
 
-select setval('users_id_seq', (select max(id) + 1 from users));
+select setval('users_id_seq', (select max(id) from users));
