@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const model = require('../model');
 
 module.exports = {
@@ -7,5 +8,12 @@ module.exports = {
       .then((result) => res.status(200).send(result.rows))
       .catch((err) => { res.status(404).send(err); });
   },
-
+  post: (req, res) => {
+    const {
+      product_id, body, date_written, username,
+    } = req.body;
+    model.questions.addQuestion(product_id, body, date_written, username)
+      .then(() => res.status(200).send('added a row'))
+      .catch((err) => { res.status(404).send(err); });
+  },
 };
