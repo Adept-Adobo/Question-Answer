@@ -36,7 +36,18 @@ on t1.id = t2.question_id
 group by product_id
 
 
-//with photo
+
+
+
+
+
+
+
+
+
+
+//with photo,
+// need to rebuild the photo
 select product_id,
   (json_agg(row_to_json((t1.id, body, date_written, asker_id, helpful, reported, answers_data)::product_questions_answers))) as questions_data
 from
@@ -58,7 +69,6 @@ left outer join
         ) as p2
       on answers.id = p2.answer_id) as p1
     ) as p
-  where question_id = '1'
   group by question_id) as t2
 on t1.id = t2.question_id
 group by product_id
