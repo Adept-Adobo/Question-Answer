@@ -21,7 +21,7 @@ create type foo as (answers_id int, answers_body varchar(1000), date_written big
 
 // this work product id - questions data
 // need to get the answers photo in there
-create type product_questions_answers as (question_id int, question_body varchar(1000), date_written bigint, asker_id int, helpfulness int, reported int, answers_id json)
+create type product_questions_answers as (question_id int, question_body varchar(1000), date_written bigint, asker_id int, helpfulness int, reported int, answers_photo json)
 
 select product_id,
   (json_agg(row_to_json((t1.id, body, date_written, asker_id, helpful, reported, answers_id)::product_questions_answers))) as questions_data
