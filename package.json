@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:jest": "jest --silent",
+    "test": "k6 run testing/stressTest.js",
     "start": "nodemon ./server/index.js",
     "lint": "eslint ./"
   },
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/Adept-Adobo/xing#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "k6": "0.0.0",
     "pg": "^8.7.1"
   },
   "devDependencies": {
@@ -30,6 +32,8 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "nodemon": "^2.0.12"
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }
