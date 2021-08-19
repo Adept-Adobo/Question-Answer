@@ -23,7 +23,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "k6": "0.0.0",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "sql-template-strings": "^2.2.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
