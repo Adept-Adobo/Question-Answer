@@ -88,9 +88,15 @@ with
   (format csv, delimiter ',', header);
 
 create index product_questions on questions(product_id);
+create index asker_questions on questions(asker_id);
+
 create index question_answers on answers(question_id);
+create index answerer_answers on answers(answerer_id);
+
 create index username_users on users(username);
 create index answer_photos on photos(answer_id);
+
+
 
 select setval('answers_id_seq', (select max(id) from answers));
 
