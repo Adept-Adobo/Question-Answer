@@ -157,3 +157,4 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.txt
