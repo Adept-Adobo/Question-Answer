@@ -70,3 +70,53 @@ Returns: JSON
         ]
     }
 ```
+
+### Post Questions
+- POST `questions/product_id`
+- Adds a question for the given product
+
+**Body Parameters**:
+
+| Parameter   | Type        | Description|
+| ----------- | ----------- | -----------|
+| body        | text        | Text of question being asked |
+| name        | text        | Username for question asker |
+| email       | text        | Email address for question asker|
+| product_id  | integer     | Required ID of the Product for which the question is posted|
+
+**Success Status Code:** `200 OK`
+
+## Demo
+
+## Run Locally
+Check required tech is installed (see below).
+
+Clone the project
+```bash
+https://github.com/Adept-Adobo/Question-Answer
+```
+Go to the project directory
+```bash
+cd Question-Answer
+```
+Install dependencies
+```bash
+npm install
+```
+Start the server
+```bash
+npm run start
+```
+Run K6 test
+```bash
+npm run test
+```
+
+## Tech Stack
+**Server**: Node.js, Express
+
+**Database**: PostgreSQL
+## Requirements
+- Web browser
+- npm
+- Linux, macOS, or Windows
