@@ -117,6 +117,7 @@ Run K6 test
 ```bash
 npm run test
 ```
+Now the app is ready at http://localhost:3000
 
 ## Tech Stack
 **Server**: Node.js, Express
