@@ -87,6 +87,12 @@ Returns: JSON
 **Success Status Code:** `200 OK`
 
 ## Demo
+#### Stress testing:
+#### 4000 requests per second (RPS)
+![4k](https://github.com/Adept-Adobo/Question-Answer/blob/main/demo/4k.jpg?raw=true)
+
+#### 6000 RPS
+![6k](https://github.com/Adept-Adobo/Question-Answer/blob/main/demo/6k.jpg?raw=true)
 
 ## Run Locally
 Check required tech is installed (see below).
